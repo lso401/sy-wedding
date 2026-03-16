@@ -1,16 +1,4 @@
-/**
- * Nature Green Wedding Invitation Configuration
- *
- * 이 파일에서 청첩장의 모든 정보를 수정할 수 있습니다.
- * 이미지는 설정이 필요 없습니다. 아래 폴더에 순번 파일명으로 넣으면 자동 감지됩니다.
- *
- * 이미지 폴더 구조 (파일명 규칙):
- *   images/hero/1.jpg      - 메인 사진 (1장, 필수)
- *   images/story/1.jpg, 2.jpg, ...  - 스토리 사진들 (순번, 자동 감지)
- *   images/gallery/1.jpg, 2.jpg, ... - 갤러리 사진들 (순번, 자동 감지)
- *   images/location/1.jpg  - 약도/지도 이미지 (1장)
- *   images/og/1.jpg        - 카카오톡 공유 썸네일 (1장)
- */
+
 
 const CONFIG = {
   // ── 초대장 열기 ──
