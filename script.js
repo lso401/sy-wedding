@@ -1,7 +1,4 @@
-/**
- * Nature Green Wedding Invitation
- * Korean Mobile 청첩장 - Script
- */
+
 
 (function () {
   'use strict';
