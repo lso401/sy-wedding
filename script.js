@@ -198,10 +198,10 @@
     // ];
     const leafColors = [
       { fill: "rgba(255, 255, 255, 0.95)", stroke: "rgba(200, 220, 190, 0.9)" }, // white
-      { fill: "rgba(255, 255, 255, 0.8)", stroke: "rgba(180, 210, 170, 0.8)" }, // soft white
-      { fill: "rgba(120, 170, 110, 0.85)", stroke: "rgba(70, 130, 60, 0.6)" }, // light sage
-      { fill: "rgba(160, 200, 140, 0.85)", stroke: "rgba(100, 160, 80, 0.6)" }, // pale green
-      { fill: "rgba(190, 220, 170, 0.9)", stroke: "rgba(130, 180, 110, 0.6)" }, // cream green
+      { fill: "rgba(255, 255, 255, 0.8)", stroke: "rgba(180, 210, 170, 0.7)" }, // soft white
+      { fill: "rgba(120, 170, 110, 0.85)", stroke: "rgba(66, 118, 56, 0.5)" }, // light sage
+      { fill: "rgba(160, 200, 140, 0.85)", stroke: "rgba(100, 160, 80, 0.4)" }, // pale green
+      { fill: "rgba(190, 220, 170, 0.9)", stroke: "rgba(130, 180, 110, 0.45)" }, // cream green
     ];
     function resize() {
       width = canvas.width = window.innerWidth;
