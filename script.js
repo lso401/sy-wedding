@@ -304,6 +304,7 @@
       CONFIG.wedding.date,
       CONFIG.wedding.time,
     );
+    // $("#heroDate").innerHTML = `2026년 10월 24일<br>토요일 오후 12시`;
     $("#heroVenue").textContent = CONFIG.wedding.venue;
   }
 

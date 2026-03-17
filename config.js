@@ -26,7 +26,7 @@ const CONFIG = {
   wedding: {
     date: "2026-10-24",
     time: "12:00",
-    venue: "벨리스 웨딩",
+    venue: "벨리스 웨딩홀",
     hall: "세레나 홀",
     address: "충북 청주시 서원구 남이면 청남로 1759",
     tel: "043-283-2000",
