@@ -116,6 +116,24 @@
     setMeta("name", "description", m.description);
   }
 
+  // 음악 재생
+  function toggleMusic() {
+  const music = document.getElementById("bgMusic");
+  const btn = document.getElementById("musicBtn");
+  if (music.paused) {
+    music.play();
+    btn.textContent = "🔇";
+  } else {
+    music.pause();
+    btn.textContent = "🎵";
+  }
+}
+
+// 페이지 열리면 자동재생 시도
+window.addEventListener("click", function() {
+  document.getElementById("bgMusic").play();
+}, { once: true });
+
   /* ═══════════════════════════════════════════
      Curtain
      ═══════════════════════════════════════════ */

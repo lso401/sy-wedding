@@ -1190,6 +1190,7 @@ a {
   }
 
   .hero__label {
+    margin-top: 20px;
     font-size: 0.9375rem;
     letter-spacing: 8px;
   }

@@ -44,6 +44,15 @@
     <script src="config.js"></script>
   </head>
   <body>
+    <!-- 음악 -->
+    <audio id="bgMusic" loop>
+  <source src="music/wedding.mp4" type="audio/mpeg">
+</audio>
+
+<!-- 음악 재생/정지 버튼 -->
+<button id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+
     <!-- ═══ Curtain Opening Animation ═══ -->
     <div id="curtain" class="curtain">
       <div class="curtain__left"></div>
