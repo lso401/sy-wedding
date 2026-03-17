@@ -131,17 +131,20 @@
 
   // 페이지 열리면 자동재생 시도
   window.addEventListener(
-  "click",
-  function (e) {
-    if (e.target.closest("#musicBtn")) return; // 음악버튼이면 건너뜀
-    const music = document.getElementById("bgMusic");
-    const btn = document.getElementById("musicBtn");
-    music.play().then(() => {
-      btn.innerHTML = '<i class="fa-solid fa-music"></i>'; // 재생되면 아이콘 업데이트
-    }).catch(() => {});
-  },
-  { once: true },
-);
+    "click",
+    function (e) {
+      if (e.target.closest("#musicBtn")) return; // 음악버튼이면 건너뜀
+      const music = document.getElementById("bgMusic");
+      const btn = document.getElementById("musicBtn");
+      music
+        .play()
+        .then(() => {
+          btn.innerHTML = '<i class="fa-solid fa-music"></i>'; // 재생되면 아이콘 업데이트
+        })
+        .catch(() => {});
+    },
+    { once: true },
+  );
 
   /* ═══════════════════════════════════════════
      Curtain
@@ -186,14 +189,20 @@
     const LEAF_COUNT = 20;
 
     // Leaf color palette: green and golden tones
+    // const leafColors = [
+    //   { fill: "rgba(139, 158, 126, 0.6)", stroke: "rgba(74, 94, 59, 0.3)" }, // sage green
+    //   { fill: "rgba(74, 94, 59, 0.5)", stroke: "rgba(58, 75, 46, 0.3)" }, // forest green
+    //   { fill: "rgba(168, 184, 158, 0.5)", stroke: "rgba(139, 158, 126, 0.3)" }, // light sage
+    //   { fill: "rgba(180, 165, 120, 0.5)", stroke: "rgba(139, 115, 85, 0.3)" }, // golden
+    //   { fill: "rgba(160, 175, 130, 0.5)", stroke: "rgba(100, 120, 70, 0.3)" }, // yellow-green
+    // ];
     const leafColors = [
-      { fill: "rgba(139, 158, 126, 0.6)", stroke: "rgba(74, 94, 59, 0.3)" }, // sage green
-      { fill: "rgba(74, 94, 59, 0.5)", stroke: "rgba(58, 75, 46, 0.3)" }, // forest green
-      { fill: "rgba(168, 184, 158, 0.5)", stroke: "rgba(139, 158, 126, 0.3)" }, // light sage
-      { fill: "rgba(180, 165, 120, 0.5)", stroke: "rgba(139, 115, 85, 0.3)" }, // golden
-      { fill: "rgba(160, 175, 130, 0.5)", stroke: "rgba(100, 120, 70, 0.3)" }, // yellow-green
+      { fill: "rgba(255, 255, 255, 0.85)", stroke: "rgba(200, 220, 190, 0.5)" }, // white
+      { fill: "rgba(255, 255, 255, 0.7)", stroke: "rgba(180, 210, 170, 0.5)" }, // soft white
+      { fill: "rgba(180, 210, 170, 0.8)", stroke: "rgba(120, 170, 110, 0.5)" }, // light sage
+      { fill: "rgba(210, 230, 195, 0.8)", stroke: "rgba(150, 190, 130, 0.5)" }, // pale green
+      { fill: "rgba(230, 240, 215, 0.85)", stroke: "rgba(170, 205, 150, 0.5)" }, // cream green
     ];
-
     function resize() {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
