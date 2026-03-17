@@ -594,6 +594,27 @@ a {
   margin-bottom: var(--spacing-xl);
 }
 
+.greeting__date {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.greeting__venue {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* 밑 공간 */
+.botanical-ornament {
+  margin-top: 9rem;  
+}
+
 .greeting__parents {
   font-size: 0.875rem;
   font-weight: 300;
