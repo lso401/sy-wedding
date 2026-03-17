@@ -197,11 +197,11 @@
     //   { fill: "rgba(160, 175, 130, 0.5)", stroke: "rgba(100, 120, 70, 0.3)" }, // yellow-green
     // ];
     const leafColors = [
-      { fill: "rgba(255, 255, 255, 0.85)", stroke: "rgba(200, 220, 190, 0.5)" }, // white
-      { fill: "rgba(255, 255, 255, 0.7)", stroke: "rgba(180, 210, 170, 0.5)" }, // soft white
-      { fill: "rgba(180, 210, 170, 0.8)", stroke: "rgba(120, 170, 110, 0.5)" }, // light sage
-      { fill: "rgba(210, 230, 195, 0.8)", stroke: "rgba(150, 190, 130, 0.5)" }, // pale green
-      { fill: "rgba(230, 240, 215, 0.85)", stroke: "rgba(170, 205, 150, 0.5)" }, // cream green
+      { fill: "rgba(255, 255, 255, 0.95)", stroke: "rgba(200, 220, 190, 0.9)" }, // white
+      { fill: "rgba(255, 255, 255, 0.8)", stroke: "rgba(180, 210, 170, 0.8)" }, // soft white
+      { fill: "rgba(120, 170, 110, 0.85)", stroke: "rgba(70, 130, 60, 0.6)" }, // light sage
+      { fill: "rgba(160, 200, 140, 0.85)", stroke: "rgba(100, 160, 80, 0.6)" }, // pale green
+      { fill: "rgba(190, 220, 170, 0.9)", stroke: "rgba(130, 180, 110, 0.6)" }, // cream green
     ];
     function resize() {
       width = canvas.width = window.innerWidth;
