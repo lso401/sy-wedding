@@ -585,27 +585,6 @@ a {
     var(--color-warm-white);
 }
 
-.greeting__date {
-  font-size: 1rem;
-  color: var(--color-text-light);
-  letter-spacing: 0.05em;
-  margin-bottom: 0.3rem;
-  text-align: center;
-}
-
-.greeting__venue {
-  font-size: 0.95rem;
-  color: var(--color-sage);
-  letter-spacing: 0.08em;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-/* 빈공간 간격 조절 */
-.botanical-ornament {
-  margin-top: 9rem;  
-}
-
 .greeting__text {
   font-size: 0.9375rem;
   font-weight: 300;
@@ -1222,7 +1201,6 @@ a {
 
   .section__title {
     font-size: 1.375rem;
-    /* color: rgba(233, 132, 38, 0.825); 타이틀 색상 */
   }
 
   .leaf-divider svg {

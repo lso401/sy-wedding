@@ -340,10 +340,6 @@
      ═══════════════════════════════════════════ */
 
   function initGreeting() {
-    $('#greetingDate').textContent = formatDate(CONFIG.wedding.date, CONFIG.wedding.time);
-    $('#greetingVenue').textContent = `${CONFIG.wedding.venue} ${CONFIG.wedding.hall}`;
-
-
     $('#greetingTitle').textContent = CONFIG.greeting.title;
     $('#greetingContent').textContent = CONFIG.greeting.content;
 
