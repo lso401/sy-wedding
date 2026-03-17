@@ -118,6 +118,27 @@ a {
   border: 0;
 }
 
+/*음악*/
+#musicBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(139, 158, 126, 0.4);
+  background: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(8px);
+  color: var(--color-forest);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(74, 94, 59, 0.15);
+}
+
 /* ═══════════════════════════════════════════
    Curtain Opening Animation
    ═══════════════════════════════════════════ */

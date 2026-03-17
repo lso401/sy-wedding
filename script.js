@@ -117,22 +117,31 @@
   }
 
   // 음악 재생
-  function toggleMusic() {
-  const music = document.getElementById("bgMusic");
-  const btn = document.getElementById("musicBtn");
-  if (music.paused) {
-    music.play();
-    btn.textContent = "🔇";
-  } else {
-    music.pause();
-    btn.textContent = "🎵";
-  }
-}
+  window.toggleMusic = function () {
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+    if (music.paused) {
+      music.play();
+      btn.innerHTML = '<i class="fa-solid fa-music"></i>';
+    } else {
+      music.pause();
+      btn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+    }
+  };
 
-// 페이지 열리면 자동재생 시도
-window.addEventListener("click", function() {
-  document.getElementById("bgMusic").play();
-}, { once: true });
+  // 페이지 열리면 자동재생 시도
+  window.addEventListener(
+  "click",
+  function (e) {
+    if (e.target.closest("#musicBtn")) return; // 음악버튼이면 건너뜀
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+    music.play().then(() => {
+      btn.innerHTML = '<i class="fa-solid fa-music"></i>'; // 재생되면 아이콘 업데이트
+    }).catch(() => {});
+  },
+  { once: true },
+);
 
   /* ═══════════════════════════════════════════
      Curtain

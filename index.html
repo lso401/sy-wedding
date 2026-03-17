@@ -42,16 +42,22 @@
 
     <link rel="stylesheet" href="styles.css" />
     <script src="config.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
+    
     <!-- 음악 -->
     <audio id="bgMusic" loop>
-  <source src="music/wedding.mp4" type="audio/mpeg">
-</audio>
+      <source src="music/wedding.mp4" type="audio/mpeg" />
+    </audio>
 
-<!-- 음악 재생/정지 버튼 -->
-<button id="musicBtn" onclick="toggleMusic()">🎵</button>
-
+    <!-- 음악 재생/정지 버튼 -->
+    <button id="musicBtn" onclick="toggleMusic()">
+      <i class="fa-solid fa-music"></i>
+    </button>
 
     <!-- ═══ Curtain Opening Animation ═══ -->
     <div id="curtain" class="curtain">
