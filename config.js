@@ -32,7 +32,8 @@ const CONFIG = {
     tel: "043-283-2000",
     mapLinks: {
       kakao: "https://kko.to/7z6cOTgsv8",
-      naver: "https://naver.me/GXglHa0h"
+      naver: "https://naver.me/GXglHa0h",
+      tmap: "https://tmap.life/b1ad9d9c"
     }
   },
 

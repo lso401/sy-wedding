@@ -803,9 +803,13 @@ a {
 
 .location__links {
   display: flex;
-  gap: var(--spacing-sm);
-  justify-content: center;
-  margin-bottom: var(--spacing-xl);
+  gap: 0.5rem;
+}
+
+.location__links .btn {
+  flex: 1;     
+  padding: 0.75rem 0;
+  text-align: center;
 }
 
 /* ─── Calendar (inline in location) ─── */
@@ -1076,10 +1080,22 @@ a {
   color: var(--color-sage);
 }
 
+.btn--tmap {
+  background: #1A6CF6; 
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 400;
+}
+
+.btn--tmap:hover {
+  filter: brightness(0.9);
+}
+
 .btn--kakao {
   background: var(--color-kakao);
   color: #3a1d1d;
-  padding: 0.75rem 1.75rem;
+  padding: 0.75rem 1.25rem;
   border-radius: var(--radius-sm);
   font-weight: 400;
 }
@@ -1091,7 +1107,7 @@ a {
 .btn--naver {
   background: var(--color-naver);
   color: var(--color-white);
-  padding: 0.75rem 1.75rem;
+  padding: 0.75rem 1.25rem;
   border-radius: var(--radius-sm);
   font-weight: 400;
 }
