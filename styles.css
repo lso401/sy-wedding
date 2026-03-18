@@ -903,6 +903,44 @@ a {
 }
 
 /* ═══════════════════════════════════════════
+   RSVP Section
+   ═══════════════════════════════════════════ */
+.rsvp {
+  background:
+    radial-gradient(ellipse 300px 200px at 80% 20%, rgba(139,158,126,0.06) 0%, transparent 70%),
+    var(--color-cream);
+}
+
+.rsvp__desc {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 2;
+  margin-bottom: var(--spacing-lg);
+}
+
+.btn--rsvp {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  background: var(--color-forest);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.btn--rsvp:hover {
+  background: var(--color-forest-dark);
+  filter: brightness(1.1);
+}
+
+/* ═══════════════════════════════════════════
    Account Section (축의금)
    ═══════════════════════════════════════════ */
 .account {

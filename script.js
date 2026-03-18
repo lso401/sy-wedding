@@ -696,8 +696,8 @@
   }
 
   /* ═══════════════════════════════════════════
-     Account Section (축의금)
-     ═══════════════════════════════════════════ */
+  Account Section (축의금)
+  ═══════════════════════════════════════════ */
 
   function renderAccounts(accounts, containerId) {
     const container = $(`#${containerId}`);
@@ -844,6 +844,8 @@
     initAccounts();
     initFooter();
     initScrollAnimations();
+    // rsvp 청첩장 참석 여부
+    $("#rsvpBtn").href = CONFIG.wedding.rsvpLink || "#";
 
     // Set story text immediately (photos load async)
     $("#storyTitle").textContent = CONFIG.story.title;

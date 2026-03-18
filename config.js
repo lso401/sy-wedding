@@ -34,7 +34,8 @@ const CONFIG = {
       kakao: "https://kko.to/7z6cOTgsv8",
       naver: "https://naver.me/GXglHa0h",
       tmap: "https://tmap.life/b1ad9d9c"
-    }
+    },
+    rsvpLink: "https://forms.gle/XwpZpcWeYVJiJHF18"
   },
 
   // ── 인사말 ──
