@@ -24,7 +24,7 @@ const CONFIG = {
   },
 
   wedding: {
-    date: "2026-10-24",
+    date: "2026-08-01",
     time: "12:00",
     venue: "벨리스 웨딩홀",
     hall: "세레나 홀",
@@ -57,14 +57,14 @@ const CONFIG = {
   // ── 마음 전하실 곳 ──
   accounts: {
     groom: [
-      { role: "신랑", name: "김신엽", bank: "국민은행", number: "000-000-000000" },
-      { role: "아버지", name: "김인홍", bank: "신한은행", number: "000-000-000000" },
-      { role: "어머니", name: "정명화", bank: "우리은행", number: "000-000-000000" }
+      { role: "신랑", name: "김신엽", bank: "하나은행", number: "739-910384-85607" },
+      { role: "아버지", name: "김인홍", bank: "신한은행", number: "110-124-82039" },
+      { role: "어머니", name: "정명화", bank: "신한은행", number: "110-238-84309" }
     ],
     bride: [
-      { role: "신부", name: "이소연", bank: "하나은행", number: "000-000-000000" },
-      { role: "아버지", name: "이창호", bank: "기업은행", number: "000-000-000000" },
-      { role: "어머니", name: "표현주", bank: "농협은행", number: "000-000-000000" }
+      { role: "신부", name: "이소연", bank: "하나은행", number: "739-910406-94907" },
+      { role: "아버지", name: "이창호", bank: "카카오뱅크", number: "3333-11-5669177" },
+      { role: "어머니", name: "표현주", bank: "신한은행", number: "110-114-697584" }
     ]
   },
 
