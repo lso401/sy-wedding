@@ -24,7 +24,7 @@ const CONFIG = {
   },
 
   wedding: {
-    date: "2026-08-01",
+    date: "2026-10-24",
     time: "12:00",
     venue: "벨리스 웨딩홀",
     hall: "세레나 홀",
