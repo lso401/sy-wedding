@@ -531,25 +531,89 @@
      ═══════════════════════════════════════════ */
 
   function initStory(storyImages) {
-    $("#storyTitle").textContent = CONFIG.story.title;
-    $("#storyContent").textContent = CONFIG.story.content;
+  $("#storyTitle").textContent = CONFIG.story.title;
+  $("#storyContent").textContent = CONFIG.story.content;
 
-    const container = $("#storyPhotos");
-    const placeholder = container.querySelector(".loading-placeholder");
-    if (placeholder) placeholder.remove();
+  const container = $("#storyPhotos");
+  const placeholder = container.querySelector(".loading-placeholder");
+  if (placeholder) placeholder.remove();
+  if (storyImages.length === 0) return;
 
-    if (storyImages.length === 0) return;
+  let currentIndex = 0;
+  let touchStartX = 0;
+  let touchStartY = 0;
 
-    storyImages.forEach((src, i) => {
-      const div = document.createElement("div");
-      div.className = "story__photo-item animate-item";
-      div.setAttribute("data-animate", "fade-up");
-      div.innerHTML = `<img src="${src}" alt="스토리 사진 ${i + 1}" loading="lazy">`;
-      div.addEventListener("click", () => openPhotoModal(storyImages, i));
-      container.appendChild(div);
-    });
-  }
+  // 트랙
+  const track = document.createElement("div");
+  track.className = "story__photos-track";
 
+  storyImages.forEach((src, i) => {
+    const div = document.createElement("div");
+    div.className = "story__photo-item";
+    div.innerHTML = `<img src="${src}" alt="스토리 사진 ${i + 1}" loading="lazy">`;
+    div.addEventListener("click", () => openPhotoModal(storyImages, i));
+    track.appendChild(div);
+  });
+
+  // 화살표 버튼
+  const prevBtn = document.createElement("button");
+  prevBtn.className = "story__nav story__nav--prev";
+  prevBtn.innerHTML = "&#8249;";
+  prevBtn.setAttribute("aria-label", "이전 사진");
+
+  const nextBtn = document.createElement("button");
+  nextBtn.className = "story__nav story__nav--next";
+  nextBtn.innerHTML = "&#8250;";
+  nextBtn.setAttribute("aria-label", "다음 사진");
+
+  
+  const dots = document.createElement("div");
+  dots.className = "story__dots";
+  storyImages.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.className = "story__dot" + (i === 0 ? " is-active" : "");
+    dot.addEventListener("click", () => goTo(i));
+    dots.appendChild(dot);
+  });
+
+  function goTo(index) {
+  currentIndex = index;
+  track.style.transform = `translateX(-${100 * index}%)`;
+  dots.querySelectorAll(".story__dot").forEach((d, i) => { 
+    d.classList.toggle("is-active", i === index);
+  });
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index === storyImages.length - 1;
+}
+
+  prevBtn.addEventListener("click", () => goTo(currentIndex - 1));
+  nextBtn.addEventListener("click", () => goTo(currentIndex + 1));
+
+  // 스와이프
+  track.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
+
+  track.addEventListener("touchend", (e) => {
+    const diffX = touchStartX - e.changedTouches[0].screenX;
+    const diffY = touchStartY - e.changedTouches[0].screenY;
+    const minSwipe = 40;
+
+    // 가로 스와이프
+    if (Math.abs(diffX) < minSwipe || Math.abs(diffX) < Math.abs(diffY)) return;
+
+    if (diffX > 0 && currentIndex < storyImages.length - 1) goTo(currentIndex + 1);
+    if (diffX < 0 && currentIndex > 0) goTo(currentIndex - 1);
+  }, { passive: true });
+
+  container.appendChild(track);
+  container.appendChild(prevBtn);
+  container.appendChild(nextBtn);
+  container.parentNode.appendChild(dots);
+
+  goTo(0);
+}
   /* ═══════════════════════════════════════════
      Gallery Section
      ═══════════════════════════════════════════ */

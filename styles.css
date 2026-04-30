@@ -680,50 +680,77 @@ a {
   white-space: pre-line;
   margin-bottom: var(--spacing-xl);
 }
-/* 기존 긴 4:3비율 사진 */
-/* .story__photos {
+
+/* gallery와 동일하게 크기 변경 */
+.story__photos {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(74, 94, 59, 0.1);
+}
+
+.story__photos-track {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
+  transition: transform 0.4s ease;
 }
 
 .story__photo-item {
-  border-radius: var(--radius-md);
-  overflow: hidden;
+  flex: 0 0 100%;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(74, 94, 59, 0.1);
 }
 
 .story__photo-item img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: transform var(--transition-slow);
-} */
-
-/* gallery와 동일하게 크기 변경 */
-.story__photos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  display: block;
 }
 
-.story__photo-item {
-  border-radius: 2px;     
-  overflow: hidden;
+.story__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.75);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(74, 94, 59, 0.1);
-  aspect-ratio: 1;        
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;          
+  padding: 0;              
+  color: var(--color-forest);
+  transition: background var(--transition-fast);
 }
 
-.story__photo-item img {
-  width: 100%;
-  height: 100%;            
-  object-fit: cover;
-  transition: transform var(--transition-slow);
+.story__nav:hover { background: rgba(255, 255, 255, 0.95); }
+.story__nav--prev { left: 10px; }
+.story__nav--next { right: 10px; }
+.story__nav:disabled { opacity: 0.3; cursor: default; }
+
+.story__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
 }
-.story__photo-item:hover img {
-  transform: scale(1.03);
+
+.story__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-sage);
+  opacity: 0.3;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.story__dot.is-active {
+  opacity: 1;
 }
 
 /* ═══════════════════════════════════════════
