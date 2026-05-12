@@ -57,12 +57,12 @@ const CONFIG = {
   // ── 마음 전하실 곳 ──
   accounts: {
     groom: [
-      { role: "신랑", name: "김신엽", bank: "하나은행", number: "739-910384-85607" },
+      { role: "신랑", name: "김신엽", bank: "카카오뱅크", number: "3333-14-0349071" },
       { role: "아버지", name: "김인홍", bank: "국민은행", number: "010-3586-1234" },
       { role: "어머니", name: "정명화", bank: "농협은행", number: "351-0973-5424-43" }
     ],
     bride: [
-      { role: "신부", name: "이소연", bank: "하나은행", number: "739-910406-94907" },
+      { role: "신부", name: "이소연", bank: "농협은행", number: "302-0501-9577-21" },
       { role: "아버지", name: "이창호", bank: "국민은행", number: "406-21-0037670" },
       { role: "어머니", name: "표현주", bank: "신한은행", number: "110-229-357720" }
     ]
