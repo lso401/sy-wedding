@@ -860,6 +860,43 @@ a {
   text-align: center;
 }
 
+/* .location__transport {
+  margin-top: var(--spacing-lg);
+  text-align: left;
+} */
+
+.location__transport {
+  background: rgba(139, 158, 126, 0.08); 
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  text-align: left;
+}
+
+.location__transport-title {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-forest);
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.location__transport-block {
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 1.9;
+}
+
+.location__transport-sub {
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.2rem;
+}
+
 /* ─── Calendar (inline in location) ─── */
 .calendar-inline {
   margin-top: var(--spacing-lg);
